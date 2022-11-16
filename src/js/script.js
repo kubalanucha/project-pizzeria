@@ -1,4 +1,4 @@
-/* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
+/* global Handlebars, utils, dataSource */
 
 {
   ('use strict');
@@ -161,6 +161,15 @@
           // determine option value, e.g. optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
           const option = param.options[optionId];
           console.log(optionId, option);
+          if (formData[paramId] && formData[paramId].includes(optionId)) {
+            if (!option.default) {
+              price += option.price;
+            }
+          } else {
+            if (option.default) {
+              price -= option.price;
+            }
+          }
         }
       }
 
