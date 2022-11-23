@@ -43,8 +43,8 @@
   const settings = {
     amountWidget: {
       defaultValue: 1,
-      defaultMin: 1,
-      defaultMax: 9,
+      defaultMin: 0,
+      defaultMax: 10,
     },
   };
 
@@ -246,7 +246,7 @@
         thisWidget.value = minValue;
       }
       if (thisWidget.value > maxValue) {
-        thisWidget.value = maxValue + 1;
+        thisWidget.value = maxValue;
       }
       thisWidget.input.value = thisWidget.value;
       thisWidget.announce();
