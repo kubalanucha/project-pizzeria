@@ -4,7 +4,7 @@ dataSource.products = {
   cake: {
     class: 'small',
     name: "Zio Stefano's Doughnut",
-    price: 9,
+    price: 1,
     description:
       'Treat yourself with this soft, freshly baked cookie. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.',
     images: ['<img class="active" src="images/doughnut.svg">'],
@@ -12,7 +12,7 @@ dataSource.products = {
   breakfast: {
     class: 'small',
     name: "Zia Giulia's Breakfast",
-    price: 9,
+    price: 1,
     description:
       'Theres no better way to start your day than indulging yourself with a cup of fresh Italian coffee and crispy waffels. Made just for you on the spot, this breakfast combo has been our guests favorite for over 50 years.',
     images: ['<img class="active" src="images/breakfast.svg">'],
@@ -31,7 +31,7 @@ dataSource.products = {
   },
   pizza: {
     name: "Nonna Alba's Pizza",
-    price: 20,
+    price: 8,
     description:
       'The true taste of Italy &ndash; homemade pizza as prepared by our grandmothers in old-fashoned brick ovens. Choose your favorite topping and enjoy your comfort food! All ingredients come straight from eco-friendly, trusted farms in the Italian countryside.',
     images: [
@@ -82,7 +82,7 @@ dataSource.products = {
   },
   salad: {
     name: "Nonno's Alberto Salad",
-    price: 9,
+    price: 8,
     description:
       'A delicious salad made of fresh, home-grown products on a crispy lettuce base.',
     images: [
