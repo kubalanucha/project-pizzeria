@@ -239,10 +239,10 @@
           }
         }
       }
+      thisProduct.priceSingle = price;
       price *= thisProduct.amountWidget.value;
       // update calculated price in the HTML
       thisProduct.priceElem.innerHTML = price;
-      thisProduct.priceSingle = price;
     }
     addToCart() {
       const thisProduct = this;
@@ -253,7 +253,7 @@
       const productSummary = {
         id: thisProduct.id,
         name: thisProduct.data.name,
-        amount: thisProduct.amountWidget.value,
+        amount: parseInt(thisProduct.amountWidget.value),
         priceSingle: thisProduct.priceSingle,
         price: thisProduct.priceSingle * thisProduct.amountWidget.value,
         params: thisProduct.prepareCartProductParams(),
@@ -300,7 +300,10 @@
       console.log('AmountWidget:', thisWidget);
       console.log('constructor arguments:', element);
       thisWidget.getElements(element);
-      thisWidget.setValue(settings.amountWidget.defaultValue);
+      thisWidget.setValue(
+        thisWidget.input.value || settings.amountWidget.defaultValue
+      );
+
       thisWidget.initActions();
     }
 
@@ -422,7 +425,7 @@
       let totalNumber = 0;
       let subtotalPrice = 0;
       for (let product of thisCart.products) {
-        totalNumber += product.amount;
+        totalNumber += product.amountWidget.value;
         subtotalPrice += product.price;
       }
       if (totalNumber != 0) {
