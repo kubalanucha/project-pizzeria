@@ -1,6 +1,6 @@
 import { settings, select, classNames } from './settings.js';
-import Product from './components/product.js';
-import Cart from './components/cart.js';
+import Product from './components/Product.js';
+import Cart from './components/Cart.js';
 import Booking from './components/Booking.js';
 
 const app = {
@@ -11,7 +11,6 @@ const app = {
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
 
     const idFromHash = window.location.hash.replace('#/', '');
-
     let pageMatchingHash = thisApp.pages[0].id;
 
     for (let page of thisApp.pages) {
