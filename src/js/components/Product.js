@@ -1,7 +1,7 @@
 import { select, classNames, templates } from '../settings.js';
 import utils from '../utils.js';
 import AmountWidget from '../components/AmountWidget.js';
-*upa
+
 class Product {
   constructor(id, data) {
     const thisProduct = this;
